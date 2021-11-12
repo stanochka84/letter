@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gradient</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Lobster&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="wrap">
+      <svg width="300" height="200" viewBox="0 0 300 200">
+        <defs>
+          <pattern id="pattern" width="10" height="10" patternUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="10" height="10" fill="#ff401a"></rect>
+              <circle r="2" cx="4" cy="4" fill="#ffffff"></circle>
+          </pattern>
+      </defs>
+       <defs>
+              <linearGradient id="gradient" x1="0" y1="0" x2="10%" y2="0" spreadMethod="repeat">
+                <stop offset="50%" stop-color="#7dc4e8" />
+                <stop offset="50%" stop-color="#b1dcf1"/>
+              </linearGradient>
+       </defs>
+        <rect x="0" y="0" width="300" height="200" fill="url(#gradient)"/>
+        <text x="42" y="68" fill="#000" opacity="0.3" font-size="40" font-family="Lobster">
+            the Breaking</text>
+        <text x="40" y="65" fill="#f4b400" stroke="#ffffff" font-size="40" font-family="Lobster">
+            the Breaking
+          <tspan dx="-163" dy="63" fill="#000" opacity="0.3" font-size="60" font-family="Lobster">Bad</tspan>
+          <tspan dx="-110" dy="-2" fill="url(#pattern)" stroke="#ffffff" font-size="60" font-family="Lobster">Bad</tspan>
+      </svg>
+  </div>
